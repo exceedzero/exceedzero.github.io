@@ -1,0 +1,370 @@
+/* 
+  ========================================
+  responsive.css - 반응형 디자인
+  ========================================
+  
+  목적: 다양한 화면 크기(모바일, 태블릿, 데스크톱)에서
+        최적의 레이아웃을 제공합니다.
+  
+  브레이크포인트:
+  - 모바일: 320px ~ 768px
+  - 태블릿: 768px ~ 1024px
+  - 데스크톱: 1024px 이상
+  
+  전략: Mobile-First (모바일 우선)
+  - 기본 스타일은 모바일용
+  - 화면이 커질수록 추가 스타일 적용
+  ========================================
+*/
+
+/* 
+  ========================================
+  태블릿 (768px 이상)
+  ========================================
+  화면이 768px 이상일 때 적용되는 스타일
+*/
+
+@media (min-width: 768px) {
+  
+  /* 
+    타이포그래피: 화면이 크면 글자도 크게
+  */
+  :root {
+    --font-size-base: 18px;     /* 기본 크기 16px → 18px */
+    --font-size-h1: 3rem;       /* H1 크기 증가 */
+    --font-size-h2: 2.5rem;     /* H2 크기 증가 */
+  }
+  
+  /* 
+    컨테이너: 여백 증가
+  */
+  .container {
+    padding: 0 var(--spacing-xl); /* 좌우 여백 증가 */
+  }
+  
+  /* 
+    네비게이션: 더 넓은 간격
+  */
+  .navbar-menu {
+    gap: var(--spacing-xl);     /* 메뉴 간격 증가 */
+  }
+  
+  /* 
+    히어로: 콘텐츠 크기 증가
+  */
+  .hero-content {
+    max-width: 900px;
+  }
+  
+  /* 
+    그리드: 태블릿에서는 2열 유지
+  */
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 
+  ========================================
+  데스크톱 (1024px 이상)
+  ========================================
+  화면이 1024px 이상일 때 적용되는 스타일
+*/
+
+@media (min-width: 1024px) {
+  
+  /* 
+    타이포그래피: 데스크톱에서 최대 크기
+  */
+  :root {
+    --font-size-h1: 3.5rem;     /* H1 최대 크기 */
+    --font-size-h2: 3rem;       /* H2 최대 크기 */
+  }
+  
+  /* 
+    히어로: 최대 너비
+  */
+  .hero-content {
+    max-width: 1000px;
+  }
+  
+  /* 
+    그리드: 3열 레이아웃
+  */
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 
+  ========================================
+  모바일 (768px 미만)
+  ========================================
+  화면이 768px 미만일 때 적용되는 스타일
+*/
+
+@media (max-width: 767px) {
+  
+  /* 
+    네비게이션: 간소화
+  */
+  .navbar {
+    padding: var(--spacing-sm) 0; /* 여백 축소 */
+  }
+  
+  .navbar-container {
+    flex-direction: column;     /* 세로 정렬 */
+    gap: var(--spacing-md);
+  }
+  
+  .navbar-menu {
+    flex-direction: column;     /* 메뉴도 세로 정렬 */
+    gap: var(--spacing-sm);
+    width: 100%;
+    text-align: center;
+  }
+  
+  .navbar-logo img {
+    height: 32px;               /* 로고 크기 축소 */
+  }
+  
+  /* 
+    히어로: 높이 축소, 여백 조정
+  */
+  .hero {
+    height: auto;               /* 자동 높이 (100vh 제거) */
+    min-height: 80vh;           /* 최소 높이 */
+    padding: var(--spacing-3xl) 0;
+  }
+  
+  .hero-content {
+    padding: var(--spacing-lg);
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;            /* 제목 크기 축소 */
+  }
+  
+  .hero-content p {
+    font-size: var(--font-size-base); /* 부제목 크기 축소 */
+  }
+  
+  /* 
+    섹션: 여백 축소
+  */
+  .section {
+    padding: var(--spacing-2xl) 0; /* 상하 여백 축소 */
+  }
+  
+  .section-title {
+    font-size: 1.75rem;         /* 제목 크기 축소 */
+  }
+  
+  /* 
+    그리드: 1열 레이아웃
+  */
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr; /* 1열로 변경 */
+    gap: var(--spacing-md);     /* 간격 축소 */
+  }
+  
+  /* 
+    푸터: 링크를 세로로
+  */
+  .footer-links {
+    flex-direction: column;     /* 세로 정렬 */
+    gap: var(--spacing-sm);
+  }
+  
+  /* 
+    버튼: 전체 너비
+  */
+  .btn {
+    width: 100%;                /* 버튼을 전체 너비로 */
+    padding: var(--spacing-md); /* 여백 조정 */
+  }
+  
+  /* 
+    카드: 여백 축소
+  */
+  .card {
+    padding: var(--spacing-lg); /* 여백 축소 */
+  }
+}
+
+/* 
+  ========================================
+  아주 작은 모바일 (480px 미만)
+  ========================================
+  화면이 480px 미만일 때 추가 최적화
+*/
+
+@media (max-width: 479px) {
+  
+  /* 
+    컨테이너: 최소 여백
+  */
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+  
+  /* 
+    타이포그래피: 최소 크기
+  */
+  .hero-content h1 {
+    font-size: 1.75rem;         /* H1 최소 크기 */
+  }
+  
+  .section-title {
+    font-size: 1.5rem;          /* 섹션 제목 최소 크기 */
+  }
+  
+  /* 
+    히어로: 이미지 크기 제한
+  */
+  .hero-content img {
+    max-width: 90%;             /* 이미지 크기 축소 */
+  }
+}
+
+/* 
+  ========================================
+  가로 모드 모바일 (Landscape)
+  ========================================
+  모바일을 가로로 돌렸을 때의 최적화
+*/
+
+@media (max-width: 767px) and (orientation: landscape) {
+  
+  /* 
+    히어로: 높이 조정
+  */
+  .hero {
+    min-height: 100vh;          /* 가로 모드에서는 전체 높이 */
+  }
+  
+  /* 
+    섹션: 여백 축소
+  */
+  .section {
+    padding: var(--spacing-xl) 0;
+  }
+}
+
+/* 
+  ========================================
+  터치 디바이스 최적화
+  ========================================
+  터치 스크린에서 사용성 향상
+*/
+
+@media (hover: none) and (pointer: coarse) {
+  
+  /* 
+    버튼: 터치하기 쉽게 크기 증가
+  */
+  .btn {
+    padding: var(--spacing-lg) var(--spacing-xl);
+    min-height: 48px;           /* 최소 터치 영역 48px */
+  }
+  
+  /* 
+    링크: 터치 영역 증가
+  */
+  .navbar-menu a,
+  .footer-links a {
+    padding: var(--spacing-sm); /* 터치 영역 확대 */
+  }
+  
+  /* 
+    드롭다운: 터치 최적화
+  */
+  .navbar-dropdown-menu {
+    min-width: 200px;           /* 터치하기 쉽게 더 넓게 */
+  }
+  
+  .navbar-dropdown-menu a {
+    padding: var(--spacing-md); /* 터치 영역 확대 */
+  }
+  
+  /* 
+    법적 문서 페이지: 모바일 최적화
+  */
+  .legal-page {
+    padding: 40px 15px;
+    padding-top: 100px; /* 모바일에서는 네비게이션이 더 작으므로 100px로 충분 */
+  }
+  
+  .legal-page h1 {
+    font-size: 2rem; /* 모바일에서 제목 크기 줄이기 */
+  }
+  
+  .legal-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .legal-section h3 {
+    font-size: 1.2rem;
+  }
+  
+  .legal-section h4 {
+    font-size: 1.1rem;
+  }
+  
+  /* 정보 테이블: 모바일에서 세로 레이아웃 */
+  .info-table {
+    display: block;
+  }
+  
+  .info-table tr {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .info-table td {
+    width: 100% !important;
+    padding: var(--spacing-sm);
+  }
+  
+  .info-table td:first-child {
+    font-weight: var(--font-weight-bold);
+    padding-bottom: 0;
+  }
+}
+
+/* 
+  ========================================
+  인쇄 스타일
+  ========================================
+  페이지를 인쇄할 때의 최적화
+*/
+
+@media print {
+  
+  /* 
+    네비게이션과 푸터는 인쇄하지 않음
+  */
+  .navbar,
+  .footer {
+    display: none;
+  }
+  
+  /* 
+    배경: 인쇄 시 흰색으로
+  */
+  body {
+    background: white;
+    color: black;
+  }
+  
+  /* 
+    그림자와 애니메이션 제거
+  */
+  * {
+    box-shadow: none !important;
+    animation: none !important;
+  }
+}

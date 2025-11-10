@@ -1,0 +1,158 @@
+/* 
+  ========================================
+  variables.css - CSS 변수 정의
+  ========================================
+  
+  목적: 프로젝트 전체에서 사용할 색상, 폰트, 크기 등을
+        변수로 정의하여 일관성 있게 관리합니다.
+  
+  사용법: var(--변수명) 형태로 사용
+         예: color: var(--color-black);
+  
+  장점: 
+  - 한 곳에서 수정하면 전체에 적용됨
+  - 코드 가독성 향상
+  - 유지보수 용이
+  ========================================
+*/
+
+:root {
+  /* 
+    ========================================
+    1. 폰트 설정 (System Font Stack)
+    ========================================
+    법적으로 100% 안전한 시스템 폰트 사용
+    - 라이센스 불필요
+    - GDPR 완벽 준수 (외부 서버 연결 없음)
+    - 다운로드 불필요 (사용자 OS에 이미 설치됨)
+    - 로딩 시간 0초
+    
+    사용되는 폰트:
+    - macOS/iOS: San Francisco (Apple)
+    - Windows: Segoe UI (Microsoft)
+    - Android: Roboto (Google)
+    - Linux: Ubuntu/Cantarell
+  */
+  --font-family: system-ui, -apple-system, BlinkMacSystemFont, 
+                 "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  
+  /* 
+    ========================================
+    2. 컬러 팔레트 (Color Palette)
+    ========================================
+    브랜드 정체성을 반영한 색상 시스템
+  */
+  
+  /* 기본 색상 */
+  --color-black: #000000;        /* 검정 - 텍스트, 배경 */
+  --color-white: #FFFFFF;        /* 흰색 - 텍스트, 배경 */
+  --color-gray: #4A5568;         /* 회색 - 보조 텍스트 */
+  
+  /* 우주 테마 색상 (다크 그라디언트용) */
+  --color-space-start: #1a1a2e;  /* 어두운 보라 - 그라디언트 시작 */
+  --color-space-mid: #0f0f1e;    /* 더 어두운 파랑 - 그라디언트 중간 */
+  --color-space-end: #000000;    /* 검정 - 그라디언트 끝 */
+  
+  /* 강조 색상 (보라/파랑 계열) */
+  --color-accent-1: #667eea;     /* 밝은 보라 - 버튼, 링크 */
+  --color-accent-2: #764ba2;     /* 진한 보라 - 버튼 hover */
+  
+  /* 그라디언트 정의 */
+  --gradient-space: linear-gradient(135deg, 
+    var(--color-space-start) 0%,    /* 시작: 어두운 보라 */
+    var(--color-space-mid) 50%,     /* 중간: 더 어두운 파랑 */
+    var(--color-space-end) 100%     /* 끝: 검정 */
+  );
+  
+  --gradient-accent: linear-gradient(135deg, 
+    var(--color-accent-1) 0%,       /* 시작: 밝은 보라 */
+    var(--color-accent-2) 100%      /* 끝: 진한 보라 */
+  );
+  
+  /* 
+    ========================================
+    3. 타이포그래피 (Typography)
+    ========================================
+    텍스트 크기와 굵기를 일관성 있게 관리
+  */
+  
+  /* 폰트 크기 */
+  --font-size-base: 16px;          /* 기본 크기 (본문) */
+  --font-size-small: 14px;         /* 작은 크기 (캡션, 푸터) */
+  --font-size-large: 18px;         /* 큰 크기 (강조 텍스트) */
+  
+  /* 제목 크기 */
+  --font-size-h1: 2.5rem;          /* H1: 40px (2.5 × 16px) */
+  --font-size-h2: 2rem;            /* H2: 32px (2 × 16px) */
+  --font-size-h3: 1.5rem;          /* H3: 24px (1.5 × 16px) */
+  --font-size-h4: 1.25rem;         /* H4: 20px (1.25 × 16px) */
+  
+  /* 폰트 굵기 */
+  --font-weight-normal: 400;       /* 보통 (본문) */
+  --font-weight-medium: 500;       /* 중간 (강조) */
+  --font-weight-bold: 700;         /* 굵게 (제목) */
+  --font-weight-black: 900;        /* 아주 굵게 (H1) */
+  
+  /* 줄 간격 */
+  --line-height-tight: 1.2;        /* 좁은 간격 (제목) */
+  --line-height-normal: 1.6;       /* 보통 간격 (본문) */
+  --line-height-loose: 1.8;        /* 넓은 간격 (긴 텍스트) */
+  
+  /* 
+    ========================================
+    4. 간격 시스템 (Spacing)
+    ========================================
+    일관된 여백과 간격 관리
+  */
+  
+  /* 기본 간격 단위 (8px 기준) */
+  --spacing-xs: 0.25rem;           /* 4px */
+  --spacing-sm: 0.5rem;            /* 8px */
+  --spacing-md: 1rem;              /* 16px */
+  --spacing-lg: 1.5rem;            /* 24px */
+  --spacing-xl: 2rem;              /* 32px */
+  --spacing-2xl: 3rem;             /* 48px */
+  --spacing-3xl: 4rem;             /* 64px */
+  
+  /* 
+    ========================================
+    5. 레이아웃 (Layout)
+    ========================================
+    컨테이너 최대 너비 및 브레이크포인트
+  */
+  
+  /* 컨테이너 최대 너비 */
+  --container-max-width: 1200px;   /* 최대 너비 */
+  --container-padding: 1.5rem;     /* 좌우 여백 */
+  
+  /* 반응형 브레이크포인트 */
+  --breakpoint-mobile: 768px;      /* 모바일 최대 */
+  --breakpoint-tablet: 1024px;     /* 태블릿 최대 */
+  
+  /* 
+    ========================================
+    6. 기타 디자인 토큰
+    ========================================
+  */
+  
+  /* 둥근 모서리 */
+  --border-radius-sm: 4px;         /* 작은 반경 */
+  --border-radius-md: 8px;         /* 중간 반경 */
+  --border-radius-lg: 12px;        /* 큰 반경 */
+  --border-radius-full: 9999px;    /* 완전한 원 */
+  
+  /* 그림자 */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  
+  /* 애니메이션 시간 */
+  --transition-fast: 150ms;        /* 빠른 전환 */
+  --transition-normal: 300ms;      /* 보통 전환 */
+  --transition-slow: 500ms;        /* 느린 전환 */
+  
+  /* Z-index 레이어 */
+  --z-index-dropdown: 1000;        /* 드롭다운 */
+  --z-index-modal: 2000;           /* 모달 */
+  --z-index-tooltip: 3000;         /* 툴팁 */
+}

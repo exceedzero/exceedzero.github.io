@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- 
+    ========================================
+    메타 태그: 웹페이지의 기본 정보
+    ========================================
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EXceed Zero - Go Further with AI</title>
+  
+  <!-- 
+    ========================================
+    파비콘 설정
+    ========================================
+    웹브라우저 탭에 표시되는 작은 아이콘입니다.
+    images/favicon.ico 파일을 FTP로 업로드한 후 자동으로 표시됩니다.
+  -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  
+  <!-- 
+    ========================================
+    CSS 파일 연결
+    ========================================
+    순서가 중요합니다:
+    1. reset.css - 브라우저 기본 스타일 초기화
+    2. variables.css - 변수 정의 (색상, 폰트 등)
+    3. style.css - 메인 스타일
+    4. responsive.css - 반응형 디자인
+  -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  
+  <!-- JavaScript (defer로 DOM 로드 후 실행) -->
+  <script src="js/background.js" defer></script>
+</head>
+<body>
+
+  <!-- 
+    ========================================
+    네비게이션 바 (상단 메뉴)
+    ========================================
+  -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <!-- 로고 -->
+      <div class="navbar-logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="EXZ">
+        </a>
+      </div>
+      
+      <!-- 메뉴 -->
+      <ul class="navbar-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        
+        <!-- 언어 선택 드롭다운 -->
+        <li class="navbar-dropdown">
+          <button class="navbar-dropdown-button">
+            🌍 Language
+          </button>
+          <div class="navbar-dropdown-menu">
+            <a href="index.html" class="active">English</a>
+            <a href="korea/index.html">Korean</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 
+    ========================================
+    Section 1: Hero (히어로 섹션)
+    ========================================
+    id="about": About 링크 클릭 시 이 섹션으로 스크롤 이동
+  -->
+  <section class="hero" id="about">
+    <!-- 배경 Canvas -->
+    <canvas id="background-canvas"></canvas>
+    
+    <div class="hero-content">
+      <!-- 로고 이미지 -->
+      <img src="images/logo-full.png" alt="EXceed Zero - Go Further with AI" class="hero-logo">
+      
+      <div class="hero-text">
+        <!-- ✨ 강조 1: 수동 데이터 수집 문제 제기 -->
+        <p class="hero-emphasis">
+          Are you still manually collecting<br>
+          massive amounts of data, such as tariff policies?
+        </p>
+        
+        <!-- 일반 텍스트: 과거 상황 설명 -->
+        <p>In the past, all you could do was search fragmented information<br>
+        or check news reports.</p>
+        
+        <!-- 일반 텍스트: 전환점 -->
+        <p>But now, things are different.</p>
+        
+        <!-- ✨ 강조 2: 매주 수천 개의 문서 추적 가능 -->
+        <p class="hero-emphasis">
+          Every week, you can continuously track<br>
+          thousands of documents scattered across various government agencies,
+        </p>
+        
+        <!-- 일반 텍스트: 단계 구분 및 참조 관계 식별 -->
+        <p>differentiate between proposal/investigation/confirmation stages,<br>
+        identify complex reference relationships,</p>
+        
+        <!-- 일반 텍스트: 타임라인 정리 -->
+        <p>and organize all announced policy information into a timeline,</p>
+        
+        <!-- ✨ 강조 3: 현재 시행 중인 정책과 검토 중인 정책 포함 -->
+        <p class="hero-emphasis">
+          including policies currently in effect<br>
+          and those under review!
+        </p>
+        
+        <!-- 일반 텍스트: AI 워크플로우 설명 -->
+        <p>With an AI workflow document that stretches to nearly 10,000 lines,<br>
+        you can run an automated data collection system every week,<br>
+        a task that would take months on your own.</p>
+        
+        <!-- ✨ 강조 4: AI의 한계 인정 -->
+        <p class="hero-emphasis">
+          However, AI isn't perfect,<br>
+          and data errors and omissions can occur.
+        </p>
+        
+        <!-- 일반 텍스트: 검증 필요성 -->
+        <p>You need not only continuous verification,<br>
+        but also separate prompts to execute the workflow.</p>
+        
+        <!-- 일반 텍스트: 시스템 공유 -->
+        <p>That's why we built a system that automatically runs every week,<br>
+        and we share</p>
+        
+        <!-- ✨ 강조 5: 결과뿐만 아니라 시스템 구축 방법 공유 -->
+        <p class="hero-emphasis">
+          not only the organized results,<br>
+          but also how to build an AI-powered<br>
+          information collection system.
+        </p>
+        
+        <!-- 일반 텍스트: 투명성 강조 -->
+        <p>Of course, AI isn't perfect, and data errors and omissions can occur.<br>
+        However, because the methodology is transparently disclosed,<br>
+        you can verify and validate it yourself.</p>
+        
+        <!-- ✨ 강조 6: 핵심 CTA - 자신만의 시스템 구축 -->
+        <p class="hero-emphasis">
+          Build your own AI data collection system<br>
+          by referencing the system we built.
+        </p>
+        
+        <!-- ✨ 강조 7: 비전 제시 - 새로운 차원으로 -->
+        <p class="hero-emphasis">
+          Toward a dimension previously unattainable.
+        </p>
+        
+        <!-- 하단 로고 이미지 -->
+        <img src="images/logo-full.png" alt="Go Further with AI - EXceed Zero" class="hero-logo-bottom">
+      </div>
+    </div>
+  </section>
+
+  <!-- 
+    ========================================
+    Section 2-3: 🚫 Not Suitable For
+    ========================================
+    id="services": Services 링크 클릭 시 이 섹션으로 스크롤 이동
+  -->
+  <section class="section warning-section" id="services">
+    <div class="container">
+      <h2 class="section-title">🚫 Please Read - Who This Service Is NOT For</h2>
+      
+      <div class="warning-intro">
+        <p><strong>This service is NOT consulting or advice. Read carefully below.</strong></p>
+        <p><strong>If any of the following applies, please do not subscribe!</strong></p>
+      </div>
+      
+      <div class="warning-list">
+        <div class="warning-item">
+          <h3>❌ For direct application to business decisions</h3>
+          <p class="example">Example: "I will change my supply chain based on this data"</p>
+          <p class="action">→ 🚫 Do not subscribe. Find a customs broker/consultant.</p>
+        </div>
+
+        <div class="warning-item">
+          <h3>❌ Believing our work results and executing something</h3>
+          <p class="example">Example: "I believe this analysis is correct and will invest"</p>
+          <p class="action">→ 🚫 Do not subscribe. Find an investment advisor.</p>
+        </div>
+
+        <div class="warning-item">
+          <h3>❌ Wanting customized analysis for your company/country</h3>
+          <p class="example">Example: "I need tariff analysis tailored to our company's situation"</p>
+          <p class="action">→ 🚫 Do not subscribe. Request customized consulting services.</p>
+        </div>
+
+        <div class="warning-item">
+          <h3>❌ Using for investment, trade, or tariff decisions</h3>
+          <p class="example">Example: "I will sign import/export contracts based on this data"</p>
+          <p class="action">→ 🚫 Do not subscribe. Find a customs broker/legal expert.</p>
+        </div>
+
+        <div class="warning-item">
+          <h3>❌ Replacing expert advice</h3>
+          <p class="example">Example: "I will use this instead to save on customs broker fees"</p>
+          <p class="action">→ 🚫 Do not subscribe. You must find a customs broker.</p>
+        </div>
+
+        <div class="warning-item">
+          <h3>❌ Wanting guaranteed data accuracy</h3>
+          <p class="example">Example: "I will demand a refund if the data is wrong"</p>
+          <p class="action">→ 🚫 Do not subscribe. We do not guarantee accuracy.</p>
+        </div>
+
+        <div class="warning-item">
+          <h3>❌ Thinking AI is perfect</h3>
+          <p class="example">Example: "AI collection must be 100% accurate"</p>
+          <p class="action">→ 🚫 Do not subscribe. AI also has errors and omissions.</p>
+        </div>
+
+        <div class="warning-item">
+          <h3>❌ Using without verifying originals</h3>
+          <p class="example">Example: "I will judge based only on the timeline"</p>
+          <p class="action">→ 🚫 Do not subscribe. You must verify original content yourself.</p>
+        </div>
+      </div>
+      
+      <div class="final-warning">
+        <p><strong>→ If any of the above applies, never subscribe!</strong></p>
+        <p><strong>→ Find qualified professionals such as customs brokers, trade consultants, lawyers!</strong></p>
+      </div>
+      
+      <div class="disclaimer-box">
+        <p><strong>If you still subscribe:</strong></p>
+        <ul>
+          <li>We are not responsible for damages due to information errors unless we are intentionally negligent</li>
+          <li>Digital content refunds are limited after access begins</li>
+          <li>You are solely responsible for final decisions</li>
+          <li>Continued use is considered monthly acceptance of the above</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 
+    ========================================
+    Section 2-4: ✅ Suitable For
+    ========================================
+  -->
+  <section class="section suitable-section">
+    <div class="container">
+      <h2 class="section-title">✅ Who This Service Is For - Welcome!</h2>
+      
+      <div class="suitable-list">
+        <div class="suitable-item">
+          <h3>✓ Wanting to learn how to collect large amounts of data with AI</h3>
+          <p class="example">Example: "I want to know the prompt writing process"</p>
+        </div>
+        
+        <div class="suitable-item">
+          <h3>✓ Wanting to observe how data collection methodology improves</h3>
+          <p class="example">Example: "I want to see how it develops through trial and error"</p>
+        </div>
+        
+        <div class="suitable-item">
+          <h3>✓ Wanting to develop your own collection system by referencing AI use cases</h3>
+          <p class="example">Example: "I want to apply this method to create my own data collection system"</p>
+        </div>
+        
+        <div class="suitable-item">
+          <h3>✓ Wanting to learn AI collection methods for complex documents like tariffs and policies</h3>
+          <p class="example">Example: "I want to learn how to automatically collect government documents with AI"</p>
+        </div>
+        
+        <div class="suitable-item">
+          <h3>✓ Wanting to pre-organize materials with AI before consulting experts</h3>
+          <p class="example">Example: "I want to organize related documents before consulting with a customs broker"</p>
+        </div>
+      </div>
+      
+      <div class="welcome-message">
+        <p><strong>→ If this is your purpose, welcome! Please continue reading.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 
+    ========================================
+    Section 3: 💡 What We Provide
+    ========================================
+  -->
+  <section class="section content-section">
+    <div class="container">
+      <h2 class="section-title">💡 What We Provide</h2>
+      
+      <div class="content-grid">
+        <div class="content-item">
+          <h3>🎓 Educational Content 85%</h3>
+          <ul>
+            <li>AI data collection prompt writing methods</li>
+            <li>AI-specific workflow writing methods</li>
+            <li>Workflow file-specific prompt writing methods</li>
+            <li>Methods to increase AI collection efficiency</li>
+            <li>Automated timeline organization techniques</li>
+          </ul>
+        </div>
+        
+        <div class="content-item">
+          <h3>📊 Information Collection Example 15%</h3>
+          <ul>
+            <li>Actual collection results (once a week)</li>
+            <li>Purpose: Example for methodology demonstration and organized information provision</li>
+            <li>Example region: U.S. tariff policy on China</li>
+            <li>Warning: Never apply example data to your situation! Always verify originals!</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 
+    ========================================
+    Section 4: 📊 Data Sources and Limitations
+    ========================================
+  -->
+  <section class="section data-section">
+    <div class="container">
+      <h2 class="section-title">📊 Data Sources and Limitations</h2>
+      
+      <p>This service shares methods for collecting data published by the following U.S. government agencies:</p>
+      
+      <ul class="source-list">
+        <li>U.S. Customs and Border Protection (CBP)</li>
+        <li>U.S. International Trade Commission (USITC)</li>
+        <li>Office of the U.S. Trade Representative (USTR)</li>
+        <li>Federal Register</li>
+      </ul>
+      
+      <p>All data is legally accessible public records under the Freedom of Information Act (FOIA).</p>
+      
+      <div class="limitations">
+        <h3>⚠️ Data Limitations:</h3>
+        <ul>
+          <li>AI collection is not perfect and may have omissions</li>
+          <li>Public data may be incomplete or outdated</li>
+          <li>We do not guarantee the accuracy of collected data</li>
+          <li>Always verify the latest and necessary information directly on the relevant agency websites</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 
+    ========================================
+    Section 5: ⚠️ Core Disclaimer
+    ========================================
+  -->
+  <section class="section disclaimer-section">
+    <div class="container">
+      <h2 class="section-title">⚠️ Service Nature and Disclaimer</h2>
+      
+      <p class="intro">This service is a platform for sharing AI utilization methodology and organized results.</p>
+      
+      <div class="disclaimer-content">
+        <ul>
+          <li><strong>Example region</strong>: U.S. tariff policy on China</li>
+          <li><strong>AI limitations</strong>: Provided using AI technology, so errors and omissions may occur</li>
+          <li><strong>Provision purpose</strong>: Methodology sharing and simple information provision, absolutely not for decision-making application</li>
+          <li><strong>Data accuracy</strong>: Not guaranteed (target: 90%+ coverage)</li>
+          <li><strong>Original verification</strong>: Must directly verify original documents such as Federal Register</li>
+          <li><strong>Final responsibility</strong>: All decisions are 100% your responsibility</li>
+        </ul>
+      </div>
+      
+      <p class="warning">
+        All information is provided for reference only and cannot replace expert advice.
+      </p>
+      
+      <p class="expert-advice">
+        Consult with qualified professionals in the field for final decisions.
+      </p>
+      
+      <div class="links">
+        <a href="terms.html">Terms of Service</a> | 
+        <a href="disclaimer.html">Disclaimer</a>
+      </div>
+      
+      <div class="eu-notice">
+        <h3>⚠️ Special Notice for EU Customers (Germany/Netherlands)</h3>
+        <p>This service provides digital content (Google Docs access rights).</p>
+        <p>When subscribing, you agree to:</p>
+        <ul>
+          <li>Immediate access and waiver of EU 14-day withdrawal right</li>
+          <li>No refund after Google Docs access</li>
+          <li>Legal basis: EU Directive 2011/83/EU Article 16(m)</li>
+        </ul>
+        <p>Refund policy details: <a href="terms.html#article5">Terms of Service Article 5</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 
+    ========================================
+    Section 6: 💰 Pricing and Subscriptions
+    ========================================
+  -->
+  <section class="section subscription-section">
+    <div class="container">
+      <h2 class="section-title">💰 Pricing and Subscriptions</h2>
+      
+      <p class="pricing-text">
+        Access permission requests are only possible through the Google Forms link posted on Notion.
+      </p>
+      <p class="pricing-text">
+        This page does not collect any personal information, cookies, etc., and does not receive access permission requests.
+      </p>
+      <p class="pricing-text">
+        We do not currently offer paid subscriptions.
+      </p>
+    </div>
+  </section>
+
+  <!-- 
+    ========================================
+    Section 7: CTA (Final)
+    ========================================
+  -->
+  <section class="section cta-section">
+    <div class="container">
+      <h2 class="section-title">Have you reviewed all the above?</h2>
+      
+      <p>
+        Check out free content on Notion, and if you like it, apply for subscription.
+      </p>
+      
+      <p>
+        You can check weekly updated AI data collection methodology and actual collection results!
+      </p>
+      
+      <a href="https://exceedzero.notion.site/Language-Selection-29f84ddcec3c804190a5def06bc29395/" target="_blank" class="btn btn-primary btn-large">
+        📚 Visit Notion Now
+      </a>
+    </div>
+  </section>
+
+  <!-- 
+    ========================================
+    푸터 (하단)
+    ========================================
+  -->
+  <footer class="footer">
+    <div class="container">
+      <!-- 링크 목록 -->
+      <div class="footer-links">
+        <a href="https://exceedzero.notion.site/Language-Selection-29f84ddcec3c804190a5def06bc29395/" target="_blank">📚 Notion</a>
+        <a href="about.html">About Us</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+      
+      <!-- 회사 정보 -->
+      <div class="footer-info">
+        <p>Company: EXceed Zero | Representative: Taehu Kim</p>
+        <p>✉️ Email: exceedzero@exceedzero.com</p>
+        <p>Business Registration Number: No paid sales | Mail-order Sale Number: No paid sales</p>
+        <p>Representative Phone Number: No paid sales | Business Address: No paid sales</p>
+      </div>
+      
+      <!-- 저작권 -->
+      <div class="footer-copyright">
+        <p>© 2025 EXceedZero. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
