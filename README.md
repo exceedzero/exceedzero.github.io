@@ -216,17 +216,18 @@ Python Cross-Verification
 
 ---
 
-## ⚠️ Critical Disclaimer
+## ⚠️ Mandatory Disclosure
 
 ```
-This report is not any 'confirmed information' or 'commercial/legal advice' regarding policies, but an educational and research [Original Source Screening Logs] for enhancing corporate AI capabilities.
+This report is not any 'definitive information' or 'commercial/legal advice' on policies, but an educational and research-purpose [original source screening log] for strengthening corporate AI capabilities.
 
-As a technical demonstration showing the algorithm's operation as-is, it intentionally includes a broad scope like health screening, and therefore contains partial errors or information omissions.
+As a technical demonstration to show the algorithm's operation as-is, it intentionally includes a broad scope like health screening, and therefore contains some errors or omissions of information, which is why all original source URLs must be directly verified.
 
-Actual policy implementation and detailed content must be directly and precisely verified by experts through the provided URLs, and we assume No legal liability for the currency, comprehensiveness, or final judgment results of the information.
+Whether actual policies are reflected and detailed contents must be directly and precisely verified by experts through the indicated URLs, and all practical decision-making (management, investment, legal, financial, procurement, contracts, etc.) based on this report is strictly prohibited.
 
-Reading the content below signifies your agreement to the above terms. 
-If you do not agree, please close this page immediately.
+We do not bear responsibility for any losses arising from violation of this, and we do not bear any legal liability whatsoever for the currency, comprehensiveness, and final judgment results of the information.
+
+Reading the text below means you agree to the above terms. If you do not agree, please close this window immediately.
 ```
 
 **Usage Precautions:**
