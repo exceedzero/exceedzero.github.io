@@ -3,20 +3,14 @@
 ========================================
 사이트맵 (sitemap.xml)
 ========================================
-이 파일은 검색 엔진(네이버, 구글 등)에게 
-웹사이트의 모든 페이지 목록을 알려주는 파일입니다.
-
-검색 엔진은 이 파일을 읽고 어떤 페이지들이 있는지,
-언제 업데이트되었는지, 얼마나 자주 변경되는지를 파악합니다.
+전략: 모든 검색엔진 = 영어만
+한국어 페이지 제외
+업데이트: 2026년 1월 13일
 ========================================
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
-  <!-- 
-    메인 페이지 (영문)
-    priority: 1.0 = 가장 중요한 페이지
-    changefreq: monthly = 월 1회 정도 업데이트
-  -->
+  <!-- 메인 페이지 (영문) -->
   <url>
     <loc>https://exceedzero.com/</loc>
     <lastmod>2025-01-05</lastmod>
@@ -24,21 +18,23 @@
     <priority>1.0</priority>
   </url>
   
-  <!-- 
-    한국어 페이지
-    priority: 1.0 = 메인 페이지만큼 중요
-  -->
+  <!-- 30주 칼럼 (핵심 콘텐츠) -->
   <url>
-    <loc>https://exceedzero.com/korea/index.html</loc>
-    <lastmod>2025-01-05</lastmod>
+    <loc>https://exceedzero.com/methodology/trinity-30-weeks-creation-process.md</loc>
+    <lastmod>2026-01-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.95</priority>
   </url>
-  
-  <!-- 
-    서비스 약관 페이지
-    priority: 0.8 = 중요한 페이지
-  -->
+
+  <!-- 실행 로그 개요 -->
+  <url>
+    <loc>https://exceedzero.com/Logs/README.md</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- 서비스 약관 -->
   <url>
     <loc>https://exceedzero.com/terms.html</loc>
     <lastmod>2025-01-05</lastmod>
@@ -46,9 +42,7 @@
     <priority>0.8</priority>
   </url>
   
-  <!-- 
-    면책 조항 페이지
-  -->
+  <!-- 면책 조항 -->
   <url>
     <loc>https://exceedzero.com/disclaimer.html</loc>
     <lastmod>2025-01-05</lastmod>
@@ -56,9 +50,7 @@
     <priority>0.8</priority>
   </url>
   
-  <!-- 
-    개인정보 처리방침 페이지
-  -->
+  <!-- 개인정보 처리방침 -->
   <url>
     <loc>https://exceedzero.com/privacy.html</loc>
     <lastmod>2025-01-05</lastmod>
@@ -66,54 +58,23 @@
     <priority>0.8</priority>
   </url>
   
-  <!-- 
-    회사 소개 페이지
-  -->
+  <!-- 회사 소개 -->
   <url>
     <loc>https://exceedzero.com/about.html</loc>
     <lastmod>2025-01-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
-  
+
   <!-- 
-    한국어 서비스 약관
+    한국어 페이지 제외:
+    - /korea/index.html
+    - /korea/terms.html
+    - /korea/disclaimer.html
+    - /korea/privacy.html
+    - /korea/about.html
+    
+    이유: 검색 결과 제외 (언어 전환 버튼으로만 접근)
   -->
-  <url>
-    <loc>https://exceedzero.com/korea/terms.html</loc>
-    <lastmod>2025-01-05</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- 
-    한국어 면책 조항
-  -->
-  <url>
-    <loc>https://exceedzero.com/korea/disclaimer.html</loc>
-    <lastmod>2025-01-05</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- 
-    한국어 개인정보 처리방침
-  -->
-  <url>
-    <loc>https://exceedzero.com/korea/privacy.html</loc>
-    <lastmod>2025-01-05</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- 
-    한국어 회사 소개
-  -->
-  <url>
-    <loc>https://exceedzero.com/korea/about.html</loc>
-    <lastmod>2025-01-05</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
 
 </urlset>
